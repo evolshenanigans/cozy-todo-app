@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "1",
+    "title": "Complete project setup",
+    "description": "Finish setting up React project with all necessary configurations",
+    "completed": true,
+    "userId": "1",
+    "createdAt": "2025-03-24T01:27:51.583Z",
+    "priority": "high",
+    "dueDate": "2025-03-25T01:27:51.583Z",
+    "category": "Work",
+    "progress": 100
+  },
+  {
+    "_id": "2",
+    "title": "Learn Redux",
+    "description": "Study Redux documentation and complete tutorial",
+    "completed": false,
+    "userId": "1",
+    "createdAt": "2025-03-24T01:27:51.583Z",
+    "priority": "medium",
+    "dueDate": "2025-03-27T01:27:51.583Z",
+    "category": "Education",
+    "progress": 30
+  },
+  {
+    "_id": "3",
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread, and vegetables",
+    "completed": false,
+    "userId": "1",
+    "createdAt": "2025-03-24T01:27:51.583Z",
+    "priority": "low",
+    "dueDate": "2025-03-25T01:27:51.583Z",
+    "category": "Shopping",
+    "progress": 0
+  },
+  {
+    "_id": "4",
+    "title": "Go for a run",
+    "description": "Morning jog for 30 minutes",
+    "completed": false,
+    "userId": "1",
+    "createdAt": "2025-03-24T01:27:51.583Z",
+    "priority": "medium",
+    "dueDate": "2025-03-24T01:27:51.583Z",
+    "category": "Health",
+    "progress": 0
+  },
+  {
+    "_id": "5",
+    "title": "Call mom",
+    "description": "Don't forget to wish her happy birthday",
+    "completed": false,
+    "userId": "1",
+    "createdAt": "2025-03-24T01:27:51.583Z",
+    "priority": "high",
+    "dueDate": "2025-03-24T01:27:51.583Z",
+    "category": "Personal",
+    "progress": 0
+  }
+]

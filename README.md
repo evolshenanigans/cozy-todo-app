@@ -1,70 +1,269 @@
-# Getting Started with Create React App
+# Cozy Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A warm, inviting task management application with user authentication, task prioritization, categories, due dates, and progress tracking.
 
-## Available Scripts
+![Cozy Todo App Screenshot](https://source.unsplash.com/random/900x500/?cozy,desk)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Register, login, and session management
+- **Task Management**: Create, update, delete, and mark tasks as complete
+- **Task Organization**: Categorize tasks and set priority levels
+- **Task Tracking**: Set due dates and track progress (0-100%)
+- **Dashboard**: Visual statistics about your tasks
+- **Responsive Design**: Works beautifully on all device sizes
+- **Cozy UI**: Warm colors and soft edges for a comfortable user experience
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend Framework**: React
+- **State Management**: Redux
+- **UI Library**: Material UI
+- **Form Validation**: Custom validation
+- **Routing**: React Router
+- **Date Handling**: date-fns
+- **Mock Backend**: Simulated API using localStorage
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14.0.0 or later)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd cozy-todo-app
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-### `npm run eject`
+3. Initialize the project with sample data
+```bash
+node scripts/setup.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server
+```bash
+npm start
+# or
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your browser and navigate to `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. Use these demo credentials to log in:
+   - Email: `demo@example.com`
+   - Password: `password123`
+   
+   Or register a new account
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Easy Setup Scripts
 
-## Learn More
+For convenience, you can also use the provided setup scripts:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- On Windows: Double-click `setup.bat`
+- On Mac/Linux: Run `./setup.sh` in the terminal
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+### Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Log in with the demo account or create your own:
 
-### Analyzing the Bundle Size
+1. Navigate to the login page
+2. Enter your credentials or click "Sign Up" to create a new account
+3. After successful authentication, you'll be redirected to the dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Task Management
 
-### Making a Progressive Web App
+Once logged in:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Create Tasks**: Use the form on the left to add new tasks
+2. **View Tasks**: All your tasks appear in the main panel 
+3. **Filter Tasks**: Use the search bar or filter by category
+4. **Task Actions**: 
+   - Check the checkbox to mark as complete
+   - Click the edit icon to modify a task
+   - Click the delete icon to remove a task
 
-### Advanced Configuration
+### Task Properties
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Each task can have:
+- Title and description
+- Priority level (low, medium, high)
+- Category (Personal, Work, Shopping, Health, Education, Other)
+- Due date
+- Completion progress (0-100%)
 
-### Deployment
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+public/               # Public assets and HTML template
+  ├── data/           # Sample data JSON files
+  ├── index.html      # Main HTML template
+  └── manifest.json   # Web app manifest
+scripts/              # Setup and utility scripts
+  └── setup.js        # Initial setup script for sample data
+src/                  # Source code
+  ├── api/            # Mock API services
+  │   ├── authService.js    # Authentication API
+  │   └── taskService.js    # Task management API
+  ├── components/     # Reusable UI components
+  │   ├── auth/       # Authentication components
+  │   ├── common/     # Common UI components
+  │   └── tasks/      # Task-related components
+  ├── pages/          # Page components
+  ├── redux/          # Redux store, actions, and reducers
+  │   ├── actions/    # Action creators
+  │   └── reducers/   # State reducers
+  ├── theme/          # Material UI theme configuration
+  ├── utils/          # Utility functions
+  ├── App.js          # Main application component
+  ├── index.css       # Global styles
+  └── index.js        # Application entry point
+```
 
-### `npm run build` fails to minify
+## Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project includes a comprehensive test suite to ensure code quality and reliability. The tests cover components, services, Redux actions, and reducers.
+
+### Test Setup
+
+The testing environment uses:
+- Jest as the test runner
+- React Testing Library for component testing
+- Redux Mock Store for testing Redux integration
+- Custom testing utilities in `src/utils/test-utils.js`
+
+### Running Tests
+
+```bash
+# Run tests in watch mode (development)
+npm test
+
+# Run tests with coverage report
+npm run test:coverage
+
+# Run tests once (CI environment)
+npm run test:ci
+```
+
+### Test Coverage
+
+The test suite covers:
+- Component rendering and interaction
+- Redux state management
+- API service functionality
+- Form validation
+- Authentication flow
+- Task management operations
+
+Coverage targets are set to 70% for:
+- Statements
+- Branches
+- Functions
+- Lines
+
+### Test Structure
+
+Tests are organized to mirror the source code structure:
+
+```
+src/
+├── api/
+│   └── __tests__/          # Tests for API services
+├── components/
+│   ├── auth/
+│   │   └── __tests__/      # Tests for authentication components
+│   └── tasks/
+│       └── __tests__/      # Tests for task-related components
+└── redux/
+    ├── actions/
+    │   └── __tests__/      # Tests for Redux actions
+    └── reducers/
+        └── __tests__/      # Tests for Redux reducers
+```
+
+### Key Test Categories
+
+1. **Component Tests**: Verify that UI components render correctly and handle user interactions properly.
+
+2. **Reducer Tests**: Ensure that state changes correctly in response to dispatched actions.
+
+3. **Action Tests**: Verify that actions dispatch the correct types and payloads, including async actions.
+
+4. **Service Tests**: Test the mock API services that handle data storage and retrieval.
+
+For more details, see the [Testing Strategy Documentation](./TESTING.md).
+
+## Deployment
+
+The application can be deployed to various hosting services:
+
+### Build for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+This creates an optimized production build in the `build` folder.
+
+### Deployment Options
+
+1. **Vercel**
+   - Connect your GitHub repository
+   - Set the framework preset to React
+   - Deploy automatically from your main branch
+
+2. **Netlify**
+   - Connect your GitHub repository
+   - Set the build command to `npm run build`
+   - Set the publish directory to `build`
+
+3. **GitHub Pages**
+   - Install gh-pages: `npm install --save-dev gh-pages`
+   - Add to package.json: `"homepage": "https://<username>.github.io/<repo-name>"`
+   - Add deploy scripts: 
+     ```
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+     ```
+   - Deploy: `npm run deploy`
+
+## Implementation Notes
+
+### Mock Backend
+
+Since this is a frontend-only implementation, the application uses mock API services that simulate a backend server:
+
+- Data is stored in localStorage
+- API calls are simulated with timeouts to mimic network requests
+- JWT authentication is simulated
+
+In a real-world scenario, you would replace these mock services with actual API calls to your backend server.
+
+## Learning Resources
+
+To better understand the implementation:
+
+1. [React Documentation](https://reactjs.org/docs/getting-started.html)
+2. [Redux Documentation](https://redux.js.org/introduction/getting-started)
+3. [Material UI Documentation](https://mui.com/getting-started/usage/)
+4. [React Router Documentation](https://reactrouter.com/web/guides/quick-start)
+5. [Jest Documentation](https://jestjs.io/docs/getting-started)
+6. [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+
+## License
+
+[MIT](LICENSE)

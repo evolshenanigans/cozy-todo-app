@@ -1,0 +1,9 @@
+[
+  {
+    "_id": "1",
+    "username": "demo",
+    "email": "demo@example.com",
+    "password": "password123",
+    "createdAt": "2025-03-24T01:27:51.582Z"
+  }
+]
