@@ -2,8 +2,6 @@
 
 A warm, inviting task management application with user authentication, task prioritization, categories, due dates, and progress tracking.
 
-![Cozy Todo App Screenshot](https://source.unsplash.com/random/900x500/?cozy,desk)
-
 ## Features
 
 - **User Authentication**: Register, login, and session management
